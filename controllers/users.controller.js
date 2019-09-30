@@ -9,7 +9,7 @@ exports.createUser = function(req, res, next){
         instituion: req.body.instituion //For now assumes, that instituion is choosen. Later, going to choose it automaticaly from email
     }
 
-    Users.createUser(user, function(err, hero){
+    Users.create(user, function(err, user){
         if(err){
             res.json({
                 error: err
